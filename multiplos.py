@@ -6,17 +6,16 @@ Programa que sirve para saber si un numero es multiplo de otro
 
 
 # Entradas
-num1=int(input("Ingrese el primer numero: "))
-num2=int(input("Ingresa el segundo numero: "))
+num1 = int(input("Introduzca un número: "))
+num2 = int(input("Introduzca otro número: "))
 
-# Proceso
-if num1 == 0 or num2 == 0:
-    mensaje = "No se puede dividir entre 0"
+# Proceso y salidas porque ya intente con todo y quiero probar a ver si juntos funciona
+if num2 != 0 and num1 % num2 == 0:
+    print(f"El número {num1} es múltiplo del {num2}")
+elif num1 != 0 and num2 % num1 == 0:
+    print(f"El número {num2} es múltiplo del {num1}")
+elif num1 == 0 or num2 == 0:
+    print(f"El número 0 es múltiplo del {num1 or num2}")
 else:
-    if num1 % num2 == 0:
-        mensaje = f"{num1} es multiplo de {num2}"
-    else:
-        mensaje = f"{num1} no es multiplo de {num2}"
+    print("Ninguno de los números es múltiplo del otro")
 
-# Salidas
-print(mensaje)
